@@ -1,9 +1,14 @@
+import { searchData } from "./searchData.js"
+import { addsearchData } from "./addSearchData.js";
 export function renderBlock(elementId, html) {
   const element = document.getElementById(elementId);
-  element.innerHtml = html;
+  element.innerHTML = html;
 }
-
-export function renderToast(message, action) {
+interface msg{
+text:string;
+type:string;
+}
+export function renderToast(message:msg|null, action:{name:string,handler:()=>void}|null) {
   let messageText = "";
 
   if (message != null) {
@@ -23,7 +28,10 @@ export function renderToast(message, action) {
       if (action != null && action.handler != null) {
         action.handler();
       }
-      renderToast(null);
+      renderToast(null,null);
     };
   }
+  searchData()
+  addsearchData()
+
 }
