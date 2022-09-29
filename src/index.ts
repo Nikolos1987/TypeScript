@@ -6,14 +6,18 @@ import { getUserData } from "./getUserData.js";
 import { localStorage } from "./localstorage.js";
 import { Amount } from "./getFavoritesAmount.js";
 
-const getData: { names: string; sorname: string; amount: number } =
+const getData:{
+  names: string;
+   sorname: string;
+    amount: number
+} [] =
   localStorage();
 
 const start = () => {
   window.addEventListener("DOMContentLoaded", () => {
-    renderUserBlock(getData.names, getData.sorname, getData.amount);
-    getUserData(getData.names);
-    Amount(getData.amount);
+    renderUserBlock(getData[0].names, getData[0].sorname, getData[0].amount);
+    getUserData(getData[0].names);
+    Amount(getData[0].amount);
     renderSearchFormBlock();
     renderSearchStubBlock();
     renderToast(
