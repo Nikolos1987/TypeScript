@@ -1,10 +1,11 @@
 import { renderBlock } from "./lib.js";
 
+
 export function renderSearchFormBlock() {
   renderBlock(
     "search-form-block",
     `
-    <form>
+    <form onsubmit="return false;">
       <fieldset class="search-filedset">
         <div class="row">
           <div>
@@ -28,11 +29,13 @@ export function renderSearchFormBlock() {
           </div>
           <div>
             <label for="max-price">Макс. цена суток</label>
-            <input id="max-price" type="text" value="" name="price" class="max-price" />
+            <input id="max-price" type="text" value="2000" name="price" class="max-price" />
           </div>
           <div>
-            <div><button>Найти</button></div>
+
+            <div><button class="addData">Найти</button></div>
           </div>
+          
         </div>
       </fieldset>
     </form>
