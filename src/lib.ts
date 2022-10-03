@@ -1,8 +1,15 @@
 import { searchData } from "./searchData.js"
 import { addsearchData } from "./addSearchData.js";
+import {favorites} from "./favorites.js"
 export function renderBlock(elementId, html) {
   const element = document.getElementById(elementId);
+
   element.innerHTML = html;
+
+
+
+  
+ 
 }
 interface msg{
 text:string;
@@ -31,7 +38,7 @@ export function renderToast(message:msg|null, action:{name:string,handler:()=>vo
       renderToast(null,null);
     };
   }
-  searchData()
   addsearchData()
+ 
 
 }
