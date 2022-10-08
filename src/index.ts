@@ -6,6 +6,11 @@ import { getUserData } from "./getUserData.js";
 import { localStorage } from "./localstorage.js";
 import { Amount } from "./getFavoritesAmount.js";
 import { favorites } from "./favorites.js";
+import { upperCase } from "./string-helper.js";
+
+console.log(upperCase("sss"));
+
+
 import {randomDate,generarationGundomApi } from "./generarationGundomApi.js"
 export interface msg {name:string
   comeDate:any
