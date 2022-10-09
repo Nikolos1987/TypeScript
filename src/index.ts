@@ -6,10 +6,6 @@ import { getUserData } from "./getUserData.js";
 import { localStorage } from "./localstorage.js";
 import { Amount } from "./getFavoritesAmount.js";
 import { favorites } from "./favorites.js";
-import { upperCase } from "./string-helper.js";
-
-console.log(upperCase("sss"));
-
 
 import {randomDate,generarationGundomApi } from "./generarationGundomApi.js"
 export interface msg {name:string
@@ -20,11 +16,16 @@ export interface msg {name:string
   likes:boolean
   id:number
   }
-export const data:msg[]=[]
-generarationGundomApi()//генерация данных
+export let data:msg[]=[]
+// generarationGundomApi()//генерация данных
+// console.log(JSON.stringify(data, null, 4));
 
 const getData: { names: string; sorname: string; amount: number } =
   localStorage();
+
+
+
+  
 const start = () => {
   window.addEventListener("DOMContentLoaded", () => {
     renderUserBlock(getData.names, getData.sorname, getData.amount);
