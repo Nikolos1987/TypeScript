@@ -1,5 +1,5 @@
 export function randomDate(date1:any, date2:any){
-    function getRandomArbitrary(min, max) {
+    function getRandomArbitrary(min:number, max:number) {
       return Math.random() * (max - min) + min;
     }
     var date1 = date1 || '01-01-1970'

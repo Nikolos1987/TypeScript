@@ -1,6 +1,6 @@
 import { renderToast } from "./lib.js"
 import { data } from "./index.js";
-
+import{msg} from "./index.js"
 
 export function supplises() {
     const button = document.querySelectorAll(".toast-main-action");
@@ -19,7 +19,7 @@ const Adddata=()=>{
     .then(response => response.json())
     .then(json =>{
 console.log(json)
-json.forEach((n)=>{
+json.forEach((n:msg)=>{
     data.push(n)
 })
 renderToast(null,null);

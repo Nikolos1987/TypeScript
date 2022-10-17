@@ -2,7 +2,7 @@ import { searchData } from "./searchData.js"
 import { addsearchData } from "./addSearchData.js";
 import {favorites} from "./favorites.js"
 import { supplises } from "./addSupplise.js";
-export function renderBlock(elementId, html) {
+export function renderBlock(elementId:string, html:string) {
   const element = document.getElementById(elementId);
 
   element.innerHTML = html;
