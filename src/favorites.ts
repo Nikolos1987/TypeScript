@@ -1,7 +1,7 @@
 import {data} from "./index.js"
 import { searchData } from "./searchData.js"
 import { msg } from "./index.js"
-export function favorites(){
+export function favorites(data){
      
        let a=document.querySelectorAll(".favorites")
        let datasets:number
